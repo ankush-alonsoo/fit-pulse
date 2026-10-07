@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <div class="dashboard-header">
+            <h2 id="welcome-msg" style="margin: 0; text-align: left;">Hello, User</h2>
+            <button id="logout-btn" class="logout-btn">Log Out</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Weight</h3>
+                <div class="value" id="dash-weight">--</div>
+            </div>
+            <div class="stat-card">
+                <h3>Height</h3>
+                <div class="value" id="dash-height">--</div>
+            </div>
+            <div class="stat-card">
+                <h3>BMI Score</h3>
+                <div class="value" id="dash-bmi">--</div>
+                <div id="bmi-status" class="bmi-badge">--</div>
+            </div>
+        </div>
+
+        <div class="goal-box">
+            <h3>Your Fitness Goal</h3>
+            <p id="dash-goal" style="color: var::(--text-muted); color: var(--text-muted);">--</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>initDashboard();</script>
+</body>
+</html>

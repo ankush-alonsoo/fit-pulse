@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse - Fitness Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Fitness Setup</h2>
+        <p class="subtitle">Please provide your current stats to continue</p>
+        <form id="metrics-form">
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" step="0.1" id="weight" required placeholder="70">
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" step="0.1" id="height" required placeholder="175">
+            </div>
+            <div class="form-group">
+                <label for="goal">Primary Fitness Goal</label>
+                <select id="goal" required>
+                    <option value="">Select a goal</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option value="Muscle Gain">Muscle Gain</option>
+                    <option value="Endurance">Improve Endurance</option>
+                    <option value="General Fitness">General Fitness & Health</option>
+                </select>
+            </div>
+            <button type="submit">Calculate & Continue</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+    <script>initSetup();</script>
+</body>
+</html>

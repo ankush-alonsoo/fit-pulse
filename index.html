@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPulse - Redirecting...</title>
+</head>
+<body>
+    <script>
+        // Check session and route appropriately
+        const activeUser = localStorage.getItem('fitpulse_active_user');
+        if (activeUser) {
+            let users = JSON.parse(localStorage.getItem('fitpulse_users')) || [];
+            const user = users.find(u => u.email === activeUser);
+            if (user && user.weight && user.height && user.goal) {
+                window.location.href = 'dashboard.html';
+            } else {
+                window.location.href = 'setup.html';
+            }
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
